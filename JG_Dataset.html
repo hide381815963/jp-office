@@ -27,10 +27,14 @@
 </table>
     <script>
 $(document).ready(function() {
- var dataset = [];
-    $.getJSON("jg.json", function(data){
-      dataset = data;
-    });
+ $.ajax({
+  type: "GET", 
+  url: "jg.json",
+  async: false
+  success: function(data){
+    dataset = data.param;
+  }
+});
 
          $('#example').DataTable( {
             data:           dataset,
