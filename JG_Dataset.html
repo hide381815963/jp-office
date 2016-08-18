@@ -25,18 +25,12 @@
   </tr>
   </thead>
 </table>
-    <script>
-(function($){
-    var json_data;
-          $('#example').DataTable( {
-           ajax:           'jg.json',
-            deferRender:    true,
-            scrollY:        500,
-            scrollCollapse: true,
-            scroller:       true
-          });
-        });
-  }
-})(jQuery);
+<script>
+  (function (){
+    $('#example').DataTable( {
+        ajax: 'jg.json',
+        deferRender:    true,
+    } );
+  })();
 </script>
 </body>
