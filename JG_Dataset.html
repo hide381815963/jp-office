@@ -28,19 +28,8 @@
     <script>
 (function($){
     var json_data;
-    $.ajax({
-        type:"GET",
-        url:"jg.json",
-        dataType:"json",
-        success:function(data){
-            json_data = data;
-            attatch_js_events(json_data);
-        }
-    });
-    function attatch_js_events(json_data){
-        $(function(){
           $('#example').DataTable( {
-           data:           dataset,
+           ajax:           'jg.json',
             deferRender:    true,
             scrollY:        500,
             scrollCollapse: true,
