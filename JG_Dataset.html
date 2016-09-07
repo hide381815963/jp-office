@@ -41,9 +41,6 @@
     <th>0608776</th>
     <th>060  </th>
     <th>札幌中央</th>
-    <th>a</th>
-    <th>aa</th>
-    <th>aaa</th>
   </tr>
   </thead>
   <tbody class="table"></tbody>
@@ -57,7 +54,11 @@
             deferRender:    true,
             scrollY:        500,
             scrollCollapse: true,
-            scroller:       true
+            scroller:       true,
+            columnDefs:     [ {
+             targets: 'no-sort',
+             orderable: false,
+            } ]
     } );
     $('#example tbody').on( 'click', 'tr', function () {
         //if ( $(this).hasClass('selected') ) {
